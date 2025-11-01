@@ -10,7 +10,7 @@
 ## PROJECT SUMMARY
 
 **Name:** fyniq_document_portal (FynIQ Document Portal)
-**Purpose:** Customer-facing document management portal for Encore Finance loan applications
+**Purpose:** Customer-facing document management portal for CRE Lending Group loan applications
 **Timeline:** Phase 1 - Complete (UI/UX finalization), Phase 2 - TBD (Backend integration)
 **Delivered:** Phase 1 UI complete - All core screens and components built with mock data
 **Status:** Development server running on localhost:3003, ready for user testing and refinement

@@ -7,7 +7,7 @@
 ## PROJECT OVERVIEW
 
 **Name:** fyniq_document_portal
-**Description:** Customer document portal for Encore Finance loan applications
+**Description:** Customer document portal for CRE Lending Group loan applications
 **Stage:** MVP
 **Stack:** Next.js 14 (App Router) + TypeScript + Tailwind CSS
 

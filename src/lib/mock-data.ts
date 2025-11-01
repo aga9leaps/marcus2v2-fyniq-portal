@@ -73,8 +73,8 @@ export interface LoanApplication {
 
 // Mock Users
 export const MOCK_USER = {
-  name: 'Sarah Johnson',
-  email: 'sarah.johnson@example.com',
+  name: 'Jane Borrower',
+  email: 'jane.borrower@example.com',
   company: 'Horizon Property Group LLC',
 };
 
@@ -93,8 +93,8 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
     documentsApproved: 5,
     completionPercentage: 67,
     loanOfficer: {
-      name: 'Michael Chen',
-      email: 'michael.chen@encorefinance.com',
+      name: 'Marcus Fieldman',
+      email: 'marcus.fieldman@crelending.com',
       phone: '(415) 555-0123',
     },
     documents: [
@@ -216,42 +216,42 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
         id: 'ACT-001',
         timestamp: '2025-10-28T10:30:00Z',
         type: 'document_uploaded',
-        user: 'Sarah Johnson',
+        user: 'Jane Borrower',
         description: 'Uploaded Personal Financial Statement',
       },
       {
         id: 'ACT-002',
         timestamp: '2025-10-27T14:15:00Z',
         type: 'document_uploaded',
-        user: 'Sarah Johnson',
+        user: 'Jane Borrower',
         description: 'Uploaded Tax Returns (Last 2 Years)',
       },
       {
         id: 'ACT-003',
         timestamp: '2025-10-26T09:45:00Z',
         type: 'document_uploaded',
-        user: 'Sarah Johnson',
+        user: 'Jane Borrower',
         description: 'Uploaded Bank Statements',
       },
       {
         id: 'ACT-004',
         timestamp: '2025-10-25T16:20:00Z',
         type: 'document_uploaded',
-        user: 'Sarah Johnson',
+        user: 'Jane Borrower',
         description: 'Uploaded Environmental Site Assessment',
       },
       {
         id: 'ACT-005',
         timestamp: '2025-10-22T11:00:00Z',
         type: 'document_approved',
-        user: 'Michael Chen',
+        user: 'Marcus Fieldman',
         description: 'Approved Property Appraisal',
       },
     ],
     messages: [
       {
         id: 'MSG-001',
-        from: 'Michael Chen',
+        from: 'Marcus Fieldman',
         timestamp: '2025-10-28T08:00:00Z',
         subject: 'Great progress on your application!',
         body: 'Hi Sarah, we\'ve reviewed the recently uploaded financial documents. Everything looks good so far. Please remember to upload the Insurance Certificate and Title Report by Nov 5 to keep things moving smoothly.',
@@ -259,7 +259,7 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
       },
       {
         id: 'MSG-002',
-        from: 'Michael Chen',
+        from: 'Marcus Fieldman',
         timestamp: '2025-10-22T13:30:00Z',
         subject: 'Property Appraisal Approved',
         body: 'The property appraisal has been reviewed and approved. The valuation aligns with our expectations.',
@@ -280,8 +280,8 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
     documentsApproved: 10,
     completionPercentage: 100,
     loanOfficer: {
-      name: 'Emily Rodriguez',
-      email: 'emily.rodriguez@encorefinance.com',
+      name: 'Lisa Stonegate',
+      email: 'lisa.stonegate@crelending.com',
       phone: '(512) 555-0456',
     },
     documents: [
@@ -335,21 +335,21 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
         id: 'ACT-201',
         timestamp: '2025-10-25T15:00:00Z',
         type: 'status_change',
-        user: 'Emily Rodriguez',
+        user: 'Lisa Stonegate',
         description: 'Application moved to Underwriting Review',
       },
       {
         id: 'ACT-202',
         timestamp: '2025-10-20T10:30:00Z',
         type: 'document_approved',
-        user: 'Emily Rodriguez',
+        user: 'Lisa Stonegate',
         description: 'All documents approved',
       },
     ],
     messages: [
       {
         id: 'MSG-201',
-        from: 'Emily Rodriguez',
+        from: 'Lisa Stonegate',
         timestamp: '2025-10-25T15:05:00Z',
         subject: 'Application in Final Review',
         body: 'Congratulations! All your documents have been approved and your application is now in final underwriting review. We expect a decision within 5-7 business days.',
@@ -370,8 +370,8 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
     documentsApproved: 8,
     completionPercentage: 57,
     loanOfficer: {
-      name: 'David Kim',
-      email: 'david.kim@encorefinance.com',
+      name: 'Daniel Riverbank',
+      email: 'daniel.riverbank@crelending.com',
       phone: '(303) 555-0789',
     },
     documents: [
@@ -416,21 +416,21 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
         id: 'ACT-301',
         timestamp: '2025-10-27T14:20:00Z',
         type: 'status_change',
-        user: 'David Kim',
+        user: 'Daniel Riverbank',
         description: 'Additional information requested',
       },
       {
         id: 'ACT-302',
         timestamp: '2025-10-27T14:15:00Z',
         type: 'document_rejected',
-        user: 'David Kim',
+        user: 'Daniel Riverbank',
         description: 'Renovation Budget rejected - needs more detail',
       },
     ],
     messages: [
       {
         id: 'MSG-301',
-        from: 'David Kim',
+        from: 'Daniel Riverbank',
         timestamp: '2025-10-27T14:30:00Z',
         subject: 'Additional Documentation Needed',
         body: 'Hi there, I\'ve reviewed your bridge loan application. We need some additional information on the exit strategy and a more detailed renovation budget. Please see the notes on the rejected documents for specific requirements. Let me know if you have any questions!',
@@ -451,8 +451,8 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
     documentsApproved: 16,
     completionPercentage: 100,
     loanOfficer: {
-      name: 'Jennifer Lee',
-      email: 'jennifer.lee@encorefinance.com',
+      name: 'Amy Creditworth',
+      email: 'amy.creditworth@crelending.com',
       phone: '(206) 555-0321',
     },
     documents: [
@@ -484,14 +484,14 @@ export const MOCK_APPLICATIONS: LoanApplication[] = [
         id: 'ACT-401',
         timestamp: '2024-10-15T16:00:00Z',
         type: 'status_change',
-        user: 'Jennifer Lee',
+        user: 'Amy Creditworth',
         description: 'Loan approved and funded',
       },
     ],
     messages: [
       {
         id: 'MSG-401',
-        from: 'Jennifer Lee',
+        from: 'Amy Creditworth',
         timestamp: '2024-10-15T16:10:00Z',
         subject: 'Congratulations! Loan Approved',
         body: 'Great news! Your construction loan has been approved and funded. The funds have been wired to the escrow account. Construction can begin per the approved timeline. Best of luck with the project!',

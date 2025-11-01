@@ -81,7 +81,7 @@ The Customer Document Portal is a secure, web-based platform that enables commer
 **Who benefits:**
 - **Borrowers** get clarity on what's needed, easy upload process, and status transparency
 - **Loan officers** save time managing documents, reduce email volume by 80%, and can focus on underwriting
-- **Encore Finance** accelerates loan processing, improves customer experience, and scales operations
+- **CRE Lending Group** accelerates loan processing, improves customer experience, and scales operations
 
 ### Target Users
 
@@ -96,7 +96,7 @@ The Customer Document Portal is a secure, web-based platform that enables commer
 - User motivation: Get loan approved faster, avoid missing deadlines
 - Pain points: Confusion about requirements, lost emails, unclear status
 
-**Secondary Users (Phase 2):** Loan officers and processors at Encore Finance
+**Secondary Users (Phase 2):** Loan officers and processors at CRE Lending Group
 - Review and approve/reject documents
 - Request additional documentation
 - Communicate with borrowers
@@ -961,7 +961,7 @@ CREATE INDEX idx_notifications_user_unread ON notifications(user_id, read_at) WH
 
 ### Business Constraints
 - English only (Phase 1)
-- Single lender (Encore Finance only, Phase 1)
+- Single lender (CRE Lending Group only, Phase 1)
 - No mobile app (web-responsive only, Phase 1)
 - Free for borrowers (no monetization Phase 1)
 

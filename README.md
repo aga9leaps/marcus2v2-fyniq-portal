@@ -1,6 +1,6 @@
 # FynIQ Document Portal
 
-**Customer-facing document management portal for Encore Finance loan applications**
+**Customer-facing document management portal for CRE Lending Group loan applications**
 
 > **Status:** ✅ Phase 1 Complete - All Core UI Features Implemented
 > **Stack:** Next.js 14 + TypeScript + Tailwind CSS + MARCUS2 Design System
@@ -52,7 +52,7 @@ npm run dev
 
 ## Project Overview
 
-The **FynIQ Document Portal** is a secure, web-based platform that enables commercial real estate loan applicants to upload, manage, and track documents throughout their loan application process with Encore Finance.
+The **FynIQ Document Portal** is a secure, web-based platform that enables commercial real estate loan applicants to upload, manage, and track documents throughout their loan application process with CRE Lending Group.
 
 **Problem Solved:** Eliminates the chaos of email-based document submission, providing borrowers with a centralized dashboard for managing loan applications and documents.
 

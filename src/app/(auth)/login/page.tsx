@@ -79,7 +79,7 @@ export default function LoginPage() {
             FynIQ Document Portal
           </h1>
           <p className="text-lg text-text-secondary leading-relaxed">
-            Secure document management for your commercial real estate loan applications with Encore Finance.
+            Secure document management for your commercial real estate loan applications with CRE Lending Group.
           </p>
           <div className="mt-12 space-y-6">
             <div className="flex items-start gap-4 text-left">
@@ -142,7 +142,7 @@ export default function LoginPage() {
           <div className="mb-6 p-4 bg-info-light border border-border-subtle rounded-lg">
             <p className="text-sm text-text-secondary">
               <strong>Demo credentials:</strong><br />
-              Email: sarah.johnson@example.com<br />
+              Email: jane.borrower@example.com<br />
               Password: demo123
             </p>
           </div>
@@ -301,7 +301,7 @@ export default function LoginPage() {
           <p className="mt-8 text-center text-sm text-text-tertiary">
             Need help?{' '}
             <a
-              href="mailto:support@encorefinance.com"
+              href="mailto:support@crelending.com"
               className="text-accent-primary hover:text-accent-hover transition-colors"
             >
               Contact Support

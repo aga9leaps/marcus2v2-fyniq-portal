@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "FynIQ Document Portal",
-  description: "Customer-facing document management portal for Encore Finance loan applications",
+  description: "Customer-facing document management portal for CRE Lending Group loan applications",
 };
 
 export default function RootLayout({

@@ -51,7 +51,7 @@ export default function DashboardLayout({
                     FynIQ Portal
                   </h1>
                   <p className="text-xs text-text-tertiary">
-                    Encore Finance
+                    CRE Lending Group
                   </p>
                 </div>
               </div>

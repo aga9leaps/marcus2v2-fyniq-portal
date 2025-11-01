@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # Development service
+  fyniq-portal-dev:
+    container_name: fyniq_document_portal_dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount source code for hot reload
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+    command: npm run dev
+    profiles:
+      - dev
+    networks:
+      - fyniq-network
+
+  # Production service
+  fyniq-portal:
+    container_name: fyniq_document_portal
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    profiles:
+      - production
+    networks:
+      - fyniq-network
+
+networks:
+  fyniq-network:
+    driver: bridge

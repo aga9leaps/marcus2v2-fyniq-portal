@@ -1,26 +1,249 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * DESIGN SYSTEM TEMPLATE
+ * Copy this to your project's globals.css or tailwind.config.js
+ * Customize colors to match your brand
+ */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ============================================
+     BACKGROUND LAYERS
+     ============================================ */
+  --bg-primary: #FAFAF8;
+  --bg-secondary: #F5F5F3;
+  --surface: #FFFFFF;
+  --surface-hover: #FCFCFB;
+
+  /* ============================================
+     TEXT HIERARCHY
+     ============================================ */
+  --text-primary: #191919;
+  --text-secondary: #5A5A57;
+  --text-tertiary: #8B8B88;
+  --text-disabled: #C4C4C0;
+
+  /* ============================================
+     ACCENT COLORS (Customize for your brand)
+     ============================================ */
+
+  /* Option 1: Warm & Sophisticated (Financial Services) */
+  --accent-primary: #CC7A3E;
+  --accent-hover: #B56A33;
+  --accent-light: #F7E8DC;
+  --accent-border: #E5C4AD;
+
+  /* Option 2: Modern & Professional (SaaS) */
+  /* --accent-primary: #3B82F6; */
+  /* --accent-hover: #2563EB; */
+  /* --accent-light: #DBEAFE; */
+  /* --accent-border: #93C5FD; */
+
+  /* Option 3: Fresh & Energetic (Consumer) */
+  /* --accent-primary: #10B981; */
+  /* --accent-hover: #059669; */
+  /* --accent-light: #D1FAE5; */
+  /* --accent-border: #6EE7B7; */
+
+  /* ============================================
+     SEMANTIC COLORS (Universal - Don't Change)
+     ============================================ */
+  --success: #2B7A4F;
+  --success-light: #E8F5EC;
+
+  --warning: #D97706;
+  --warning-light: #FEF3E2;
+
+  --error: #DC2626;
+  --error-light: #FEE2E2;
+
+  --info: #2563EB;
+  --info-light: #EFF6FF;
+
+  /* ============================================
+     BORDERS & DIVIDERS
+     ============================================ */
+  --border-subtle: #E8E8E5;
+  --border-medium: #D4D4D0;
+  --border-strong: #A8A8A3;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-xs: 0 1px 2px rgba(25, 25, 25, 0.04);
+  --shadow-sm: 0 2px 4px rgba(25, 25, 25, 0.06), 0 1px 2px rgba(25, 25, 25, 0.03);
+  --shadow-md: 0 4px 8px rgba(25, 25, 25, 0.08), 0 2px 4px rgba(25, 25, 25, 0.04);
+  --shadow-lg: 0 12px 24px rgba(25, 25, 25, 0.10), 0 4px 8px rgba(25, 25, 25, 0.05);
+  --shadow-xl: 0 24px 48px rgba(25, 25, 25, 0.12), 0 8px 16px rgba(25, 25, 25, 0.06);
+
+  /* ============================================
+     SPACING (8px grid)
+     ============================================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-toast: 1060;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================
+   ACCESSIBILITY: Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+/* ============================================
+   FOCUS INDICATORS (Accessibility)
+   ============================================ */
+*:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*---break---
+ */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/*---break---
+ */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

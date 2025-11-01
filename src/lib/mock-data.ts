@@ -539,8 +539,8 @@ export function getStatusColor(status: ApplicationStatus | DocumentStatus): stri
     // Document statuses
     'pending': 'secondary',
     'uploaded': 'info',
-    'under_review': 'info',
-    'approved': 'success',
+    // 'under_review': 'info', // Duplicate key - same as application status
+    // 'approved': 'success', // Duplicate key - same as application status
     'rejected': 'error',
     'resubmit_requested': 'warning',
   };

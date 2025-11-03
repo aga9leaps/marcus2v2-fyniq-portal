@@ -83,9 +83,7 @@ export default function LoginPage() {
           </p>
           <div className="mt-12 space-y-6">
             <div className="flex items-start gap-4 text-left">
-              <div className="w-10 h-10 bg-white/80 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-accent-primary font-semibold">✓</span>
-              </div>
+              <div className="w-2 h-2 bg-accent-primary rounded-full flex-shrink-0 mt-2"></div>
               <div>
                 <h3 className="font-semibold text-text-primary mb-1">Upload & Track</h3>
                 <p className="text-sm text-text-secondary">
@@ -94,9 +92,7 @@ export default function LoginPage() {
               </div>
             </div>
             <div className="flex items-start gap-4 text-left">
-              <div className="w-10 h-10 bg-white/80 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-accent-primary font-semibold">✓</span>
-              </div>
+              <div className="w-2 h-2 bg-accent-primary rounded-full flex-shrink-0 mt-2"></div>
               <div>
                 <h3 className="font-semibold text-text-primary mb-1">Secure & Compliant</h3>
                 <p className="text-sm text-text-secondary">
@@ -105,9 +101,7 @@ export default function LoginPage() {
               </div>
             </div>
             <div className="flex items-start gap-4 text-left">
-              <div className="w-10 h-10 bg-white/80 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-accent-primary font-semibold">✓</span>
-              </div>
+              <div className="w-2 h-2 bg-accent-primary rounded-full flex-shrink-0 mt-2"></div>
               <div>
                 <h3 className="font-semibold text-text-primary mb-1">Stay Informed</h3>
                 <p className="text-sm text-text-secondary">
@@ -139,7 +133,7 @@ export default function LoginPage() {
           </div>
 
           {/* Demo Credentials Note */}
-          <div className="mb-6 p-4 bg-info-light border border-border-subtle rounded-lg">
+          <div className="mb-6 p-4 bg-bg-secondary border border-border-subtle rounded-lg">
             <p className="text-sm text-text-secondary">
               <strong>Demo credentials:</strong><br />
               Email: jane.borrower@example.com<br />
@@ -190,7 +184,7 @@ export default function LoginPage() {
                 <button
                   type="button"
                   className="text-sm text-accent-primary hover:text-accent-hover transition-colors"
-                  onClick={() => alert('🔐 Password Reset Feature\n\nThis feature will allow users to:\n• Request a password reset link via email\n• Verify identity through security questions\n• Create a new secure password\n\n📋 Status: Coming in Phase 2 - Backend Integration')}
+                  onClick={() => alert('Password Reset Feature\n\nThis feature will allow users to:\n• Request a password reset link via email\n• Verify identity through security questions\n• Create a new secure password\n\nStatus: Coming in Phase 2 - Backend Integration')}
                 >
                   Forgot password?
                 </button>

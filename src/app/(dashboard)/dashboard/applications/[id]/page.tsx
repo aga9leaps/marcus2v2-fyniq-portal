@@ -214,20 +214,20 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="text-center p-4 bg-success-light rounded-lg">
-                      <p className="text-2xl font-bold text-success">
+                    <div className="text-center p-4 bg-surface border border-border-subtle rounded-lg">
+                      <p className="text-2xl font-bold text-text-primary">
                         {application.documentsApproved}
                       </p>
                       <p className="text-sm text-text-tertiary">Approved</p>
                     </div>
-                    <div className="text-center p-4 bg-info-light rounded-lg">
-                      <p className="text-2xl font-bold text-info">
+                    <div className="text-center p-4 bg-surface border border-border-subtle rounded-lg">
+                      <p className="text-2xl font-bold text-text-primary">
                         {application.documentsSubmitted - application.documentsApproved}
                       </p>
                       <p className="text-sm text-text-tertiary">Under Review</p>
                     </div>
-                    <div className="text-center p-4 bg-warning-light rounded-lg">
-                      <p className="text-2xl font-bold text-warning">
+                    <div className="text-center p-4 bg-surface border border-border-subtle rounded-lg">
+                      <p className="text-2xl font-bold text-text-primary">
                         {application.documentsRequired - application.documentsSubmitted}
                       </p>
                       <p className="text-sm text-text-tertiary">Pending</p>
@@ -299,7 +299,7 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                           )}
 
                           {document.notes && (
-                            <div className="p-3 bg-warning-light border border-warning rounded-lg">
+                            <div className="p-3 bg-surface border-l-4 border-l-warning border border-border-subtle rounded-lg">
                               <p className="text-sm text-text-primary">
                                 <strong>Note:</strong> {document.notes}
                               </p>
@@ -313,7 +313,7 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                           <Button
                             size="sm"
                             className="bg-accent-primary hover:bg-accent-hover"
-                            onClick={() => alert('📤 Upload Document\n\nThis will open the document upload modal where you can:\n• Drag and drop files\n• Select multiple documents\n• See upload progress\n• Confirm successful upload\n\n📋 Status: Fully functional in Phase 1')}
+                            onClick={() => alert('Upload Document\n\nThis will open the document upload modal where you can:\n• Drag and drop files\n• Select multiple documents\n• See upload progress\n• Confirm successful upload\n\nStatus: Fully functional in Phase 1')}
                           >
                             <Upload className="w-4 h-4 mr-2" />
                             Upload
@@ -323,7 +323,7 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                             <Button
                               size="sm"
                               variant="outline"
-                              onClick={() => alert('📥 Download Document\n\nThis feature will allow you to:\n• Download the document to your device\n• View document in browser\n• Share document link\n\n📋 Status: Coming in Phase 2 - Backend Integration')}
+                              onClick={() => alert('Download Document\n\nThis feature will allow you to:\n• Download the document to your device\n• View document in browser\n• Share document link\n\nStatus: Coming in Phase 2 - Backend Integration')}
                             >
                               <Download className="w-4 h-4 mr-2" />
                               Download
@@ -331,7 +331,7 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                             <Button
                               size="sm"
                               variant="outline"
-                              onClick={() => alert('🔄 Replace Document\n\nThis feature will allow you to:\n• Upload a new version of this document\n• Keep version history\n• Add notes about the replacement\n\n📋 Status: Coming in Phase 2 - Backend Integration')}
+                              onClick={() => alert('Replace Document\n\nThis feature will allow you to:\n• Upload a new version of this document\n• Keep version history\n• Add notes about the replacement\n\nStatus: Coming in Phase 2 - Backend Integration')}
                             >
                               <RefreshCw className="w-4 h-4 mr-2" />
                               Replace
@@ -342,8 +342,8 @@ export default function ApplicationDetailPage({ params }: { params: { id: string
                                 variant="outline"
                                 className="text-error border-error hover:bg-error-light"
                                 onClick={() => {
-                                  if (confirm(`⚠️ Delete Document\n\nAre you sure you want to delete "${document.name}"?\n\nThis action cannot be undone.\n\nClick OK to confirm deletion.`)) {
-                                    alert('🗑️ Document Deleted\n\nThis feature will:\n• Permanently remove the document\n• Update application status\n• Log the deletion in activity timeline\n\n📋 Status: Coming in Phase 2 - Backend Integration');
+                                  if (confirm(`Delete Document\n\nAre you sure you want to delete "${document.name}"?\n\nThis action cannot be undone.\n\nClick OK to confirm deletion.`)) {
+                                    alert('Document Deleted\n\nThis feature will:\n• Permanently remove the document\n• Update application status\n• Log the deletion in activity timeline\n\nStatus: Coming in Phase 2 - Backend Integration');
                                   }
                                 }}
                               >

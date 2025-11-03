@@ -81,7 +81,7 @@ export default function DashboardPage() {
           </div>
           <Button
             className="bg-accent-primary hover:bg-accent-hover text-white"
-            onClick={() => alert('➕ New Loan Application\n\nThis feature will allow you to:\n• Create a new loan application\n• Select loan type (Purchase, Refinance, Bridge, Construction)\n• Enter property and loan details\n• Start the document upload process\n\n📋 Status: Coming in Phase 2 - Backend Integration')}
+            onClick={() => alert('New Loan Application\n\nThis feature will allow you to:\n• Create a new loan application\n• Select loan type (Purchase, Refinance, Bridge, Construction)\n• Enter property and loan details\n• Start the document upload process\n\nStatus: Coming in Phase 2 - Backend Integration')}
           >
             <FileText className="w-4 h-4 mr-2" />
             New Application
@@ -223,9 +223,9 @@ export default function DashboardPage() {
 
             {/* Unread Messages Badge */}
             {application.messages.filter(m => !m.read).length > 0 && (
-              <div className="mt-3 p-2 bg-info-light border border-border-subtle rounded-lg flex items-center gap-2">
-                <Bell className="w-4 h-4 text-info" />
-                <span className="text-sm text-info font-medium">
+              <div className="mt-3 p-2 bg-surface border-l-4 border-l-accent-primary border border-border-subtle rounded-lg flex items-center gap-2">
+                <Bell className="w-4 h-4 text-text-tertiary" />
+                <span className="text-sm text-text-primary font-medium">
                   {application.messages.filter(m => !m.read).length} new message(s)
                 </span>
               </div>
